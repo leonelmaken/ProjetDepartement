@@ -1,0 +1,59 @@
+<!-- Titre de la section -->
+<h5 class="mt-5 mb-3 fst-italic ms-4">Mes propositions de {{typeProposition}}</h5>
+
+  <!-- Lorsqu'il y a au moins une demande -->
+<div class="container" *ngIf="listPropositions.length > 0">
+    <div class="box rounded mx-1 mb-3 shadow-lg p-3 mb-5" *ngFor="let item of listPropositions">
+
+        <!-- si le statut de la proposition correspond au type de proposition selectionne on affiche la proposition -->
+      <div *ngIf="item.statut===typeProposition">
+        <h6 class="ms-3 mt-3 mb-1">{{item.entreprise}}</h6>
+        <hr class="m-0 mx-3">
+        <!-- On affiche le secteur d'activite uniquement s'il s'agit d'un parrainage ou d'un emploi -->
+        <div *ngIf="typeProposition==='emploi' || typeProposition==='parrainage'">
+          <div class="mt-3">
+            <div class="ms-3 mb-1">
+              Seteur d'activite:<span class="fw-light ms-3 mb-1">{{item.secteur}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- On affiche le poste uniquement s'il s'agit d'un emploi -->
+        <div *ngIf="typeProposition==='emploi'">
+          <div class="mt-3">
+            <div class="ms-3 mb-1">
+              Poste:<span class="fw-light ms-3 mb-1">{{item.poste}}</span>
+            </div>
+          </div>
+        </div>
+        <!-- On affiche la periode uniquement s'il s'agit d'un stage ou d'un emploi -->
+        <div *ngIf="typeProposition==='emploi' || typeProposition==='stage'">
+          <div class="mt-3">
+            <div class="ms-3 mb-1">
+              Periode:<span class="fw-light ms-3 mb-1">de {{item.debut}} a {{item.fin}}</span>
+            </div>
+        </div>
+        </div>
+        <div class="mt-4">
+          <div class="ms-3 mb-1">
+            <span *ngIf="item.etat!==null" class="fw-light fs-6 fst-italic ms-5 mb-1">{{item.etat}}</span>
+            <span *ngIf="item.etat===null" class="fw-light fs-6 fst-italic ms-5 mb-1">Acceptez-vous cette proposition?</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+<!-- Lorsqu'il n'y a pas de propositions -->
+<div class="container" *ngIf="listPropositions.length <= 0">
+  <div class="box rounded mb-3 shadow-lg p-3 mb-5">
+    <h6 class="ms-3 mt-3 mb-1">Aucune proposition de {{typeProposition}} recue actuellement</h6>
+    <hr class="mt-0 mb-5 mx-3">
+  </div>
+</div>
+
+<hr class="mt-3">
+
+
+
+

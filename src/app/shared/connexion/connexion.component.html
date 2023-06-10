@@ -1,0 +1,89 @@
+
+<section class="h-100 gradient-form" style="background-color: #f5f5f5;">
+  <div class="container h-40">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-5 text-black my-3">
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-center gradient-custom-2 rounded-5">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4">
+                <!--Insertion du texte defilant-->
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h4 class="mb-4">Venez a la rencontre de nouvelles opportunites.</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">Etudiants, enseignants et entreprises</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">La plateforme du departement informatique de l'Universite de Yaounde I vous aide a vous promouvoir</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">Entrez en contact avec le profil qui vous interesse, cela juste en un clic</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">Trouver des stages, des emplois ou des parrainages facilement</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">Obtenez les services d'Etudiants ou d'enseignants en informatique pour vos besoins</h4>
+                    </div>
+                    <div class="carousel-item">
+                      <h4 class="mb-4">Demandez un encadrement a l'enseignant de votre choix</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <!--Insertion du logo et du nom du departement-->
+                <div class="text-center">
+                  <img src="/assets/images/logoDept.png"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mb-5 pb-1">Departement informatique</h4>
+                </div>
+
+                <!--Formulaire-->
+                <form [formGroup]="form" (ngSubmit)="submit()">
+
+                    <div class="form-outline mb-1 small mb-4">
+                        <label for="login">User mail</label>
+                        <input type="text" id="form2Example11" class="form-control form-control-sm"
+                        placeholder="adresse mail" formControlName="mail"/>
+                    </div>
+
+                  <!--Zone de saisie du mot de passe avec affichage et masquage-->
+                    <div class="form-outline mb-1 small mb-5">
+                        <label for="login">Password</label>
+                        <div class="input-group">
+                            <input [type]="isPasswordVisible ? 'texte' : 'password'" id="form2Example22" class="form-control form-control-sm" placeholder="*************" formControlName="password">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary btn-sm" type="button" (click)="togglePasswordVisibility()">
+                                <i [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" class="fa"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-5 mb-lg-5">
+                    <button [disabled]="form.invalid" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none" type="submit">Connexion</button>
+                  </div>
+
+                  <!--Renvoi vers le formulaires d'inscription-->
+                  <div class="d-flex align-items-center justify-content-center pb-4">
+                    <p class="mb-0 me-2">Vous n'avez pas de compte?</p>
+                    <button routerLink="/inscription" type="submit" class="btn btn-outline-danger">S'inscrire</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

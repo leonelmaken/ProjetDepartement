@@ -1,0 +1,79 @@
+<!-- Barre de navigation-->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+    <!-- Insertion du logo de l'universite et du nom du departement -->
+    <div class="d-flex text-center row ms-2 w-25 h-25 mt-2">
+      <img src="/assets/image/uyy.png"
+        style="width: 90px;" class="col-lg-2" alt="logo">
+      <p class="h6 col-lg-2 fst-italic mb-2 fw-bolder text-white">Departement informatique</p>
+    </div>
+
+    <!-- Creation du bouton toggle qui permettra de reduire le menu -->
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <!-- Elements du menu -->
+    <div class="collapse navbar-collapse align-content-center" id="navbarNav">
+      <ul class="navbar-nav justify-content-space-bet">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}" >
+            <a class="nav-link" id="navL" aria-current="page" (click)="refresh()"  [routerLink]="['./home']">Accueil</a>
+          </li>
+
+
+
+
+
+
+
+
+          <li class="nav-item dropdown" class="nav-item" routerLinkActive="active">
+            <a class="nav-link dropdown-toggle" id="dropdownMenuButton2" (click)="refresh()"  class="navbarDropdown" id="navL" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Annuaires
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li routerLinkActive="active"><a class="dropdown-item" (click)="refresh()"  [routerLink]="['./annuaireStu']" >Etudiants</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li routerLinkActive="active"><a class="dropdown-item" (click)="refresh()"  [routerLink]="['./annuaireCom']">Entreprises</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li routerLinkActive="active"><a class="dropdown-item" (click)="refresh()"  [routerLink]="['./annuaireTeach']" >Enseignants</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item me-3" routerLinkActive="active">
+            <a class="nav-link" id="navL" (click)="refresh()"  [routerLink]="['./a_propos']" >A propos</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active"><a id="navL" class="nav-link" (click)="refresh()"  [routerLink]="['./offres']">Offres</a><ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li routerLinkActive="active"><a class="dropdown-item" (click)="refresh()"  [routerLink]="['./listemploi']" >Emplois</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li routerLinkActive="active"><a class="dropdown-item" (click)="refresh()"  [routerLink]="['./liststage']">Stages</a></li>
+            <li><hr class="dropdown-divider"></li>
+            </ul></li>
+
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}" ><a class="nav-link"  (click)="refresh()"  [routerLink]="['./event']" id="navL" >Nos evenements</a> </li>
+<!--
+          <li class="nav-item ms-5 me-3" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true}" >
+            <a [routerLink]="['./signup' , '0', 'user.id']"   ><button class="btn" id="display_form" >Sign up</button></a>
+          </li>
+
+          <li class="nav-item">
+            <a [routerLink]="['./signin']"  ><button class="btn"  id="display_form1">Sign in</button></a>
+          </li> -->
+
+            <div *ngIf="isConnected" [routerLink]="['/profil']" (click)="refresh()"  class="button btn mt-1 ml-2">
+                Mon profil
+            </div>
+
+            <div *ngIf="!isConnected" [routerLink]="['/connexion']" class="button btn mt-1 ml-2">
+                Se connecter
+            </div>
+
+            <div *ngIf="!isConnected" [routerLink]="['/inscription']" class="button btn mt-1 ml-2">
+                S'enregistrer
+            </div>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+

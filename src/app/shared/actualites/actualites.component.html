@@ -1,0 +1,47 @@
+<div class="container">
+  <h2>{{ title }}</h2>
+
+  <br><br>
+
+  <div class="mt-4" style="background-color: #0000008a; height: 10px; border-radius: 7px;"></div>
+  <div class="filter my-4">
+      <div class="row">
+          <div class="col-md-4">
+              <span>Rechercher </span>
+          </div>
+          <div class="col-md-8 form-group">
+              <input type="text" name="" class="form-control" [ngModel]="actualiteresearch" (ngModelChange)="actualiteresearch = $event" placeholder="Tap here to search"/>
+          </div>
+      </div>
+  </div>
+  <br><br>
+  <div  *ngIf="rechercherActivity.length > 0">
+
+    <div class="row row-cols-1 row-cols-md-3">
+      <div class="col mb-4" *ngFor="let actualite of rechercherActivity">
+        <div class="card h-100">
+          <img [routerLink]="['/event',actualite.idPub]"
+              class="card-img-top"
+              [src]="actualite.image"
+              [title]="actualite.type "
+              [alt]="actualite.title"
+          />
+          <div class="card-body">
+              <h5 class="card-title">{{ actualite.title }}</h5>
+              <p class="card-text">
+                  {{ actualite.description }}
+              </p>
+          </div>
+          <div class=" modif ">
+            <p class="card-text d-flex order-last "><small class="text-body-secondary "> <button class="btn btn-primary " id="regarder" [routerLink]="['/event', actualite.idPub]">regarder</button></small></p>
+
+          </div>
+        </div>
+      </div>
+  </div>
+  </div>
+  <div class="container" *ngIf=" rechercherActivity.length == 0">
+    <h3>Aucune actualité trouvée.</h3>
+</div>
+</div>
+

@@ -1,0 +1,80 @@
+[
+    {
+        "idOffre": 1,
+        "periode": "Coupe du departement",
+        "description": "La coupe est arrivee a la finale qui opposera lnfo L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT",
+        "image": "assets/img/image00001.jpg",
+        "type": "EMPLOI",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+    },
+    {
+        "idOffre": 2,
+        "periode": "Titlte 2",
+        "description": "Description 2",
+        "image": "assets/img/image00002.jpg",
+        "type": "STAGE",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+    },
+    {
+        "idOffre": 3,
+        "periode": "Titlte 3",
+        "description": "Description 3",
+        "image": "assets/img/image00003.jpg",
+        "type": "STAGE",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+
+    },
+    {
+        "idOffre": 4,
+        "periode": "Titlte 4",
+        "description": "Description 4",
+        "image": "assets/img/image00004.jpg",
+        "type": "EMPLOI",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+    },
+    {
+        "idOffre": 5,
+        "periode": "Titlte 5",
+        "description": "Description 5",
+        "image": "assets/img/image00005.jpg",
+        "type": "STAGE",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Elevage poulet",
+        "etat": 1
+    },
+    {
+        "idOffre": 6,
+        "periode": "Titlte 6",
+        "description": "Description 6",
+        "image": "assets/img/image00006.jpg",
+        "type": "STAGE",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+    },
+    {
+        "idOffre": 7,
+        "periode": "Titlte 7",
+        "description": "Description 7",
+        "image": "assets/img/image00007.jpg",
+        "type": "EMPLOI",
+        "competences_requises": "Tests logiciel",
+        "poste": "Chef projet",
+        "secteur": "Conception logicielle",
+        "etat": 1
+    }
+]

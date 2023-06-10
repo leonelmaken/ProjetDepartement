@@ -1,0 +1,41 @@
+<!-- Titre de la section -->
+<h5 class="mt-5 mb-3 fst-italic ms-4">Demandes de {{typeDemandes}} recues</h5>
+
+<!-- Lorsqu'il y a au moins une demande -->
+<div class="container" *ngIf="listDemandes.length > 0">
+    <div class="box rounded mx-1 mb-3 shadow-lg p-3 mb-5" *ngFor="let item of listDemandes">
+
+      <!-- si le statut de la demande correspond au type de demande selectionne on affiche la demande -->
+      <div *ngIf="item.statut===typeDemandes">
+        <!-- nom de l'etudiant ou de l'enseignant qui fait la demande -->
+        <h6 class="ms-3 mt-3 mb-1">{{ user.nom }}</h6>
+        <hr class="m-0 mx-3">
+        <!-- le status permet de preciser si c'est un enseignant ou un etudiant -->
+        <div class="mt-3">
+          <div class="ms-3 mb-1">
+            Status:<span class="fw-light ms-3 mb-1">{{ user.roles }}(e)</span>
+          </div>
+        </div>
+        <!-- s'il s'agit d'un etudiant on affiche son niveau -->
+        <div class="mt-3" *ngIf="user.roles == 'Etudiant'">
+          <div class="ms-3 mb-1">
+            Niveau:<span class="fw-light ms-3 mb-1">{{user.niveau}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+<!-- Lorsqu'il n'y a pas de demandes -->
+<div class="container" *ngIf="listDemandes.length <= 0">
+  <div class="box rounded mb-3 shadow-lg p-3 mb-5">
+    <h6 class="ms-3 mt-3 mb-1">Aucune demande de {{typeDemandes}} actuellement</h6>
+    <hr class="mt-0 mb-5 mx-3">
+  </div>
+</div>
+
+<hr class="mt-3">
+
+
+

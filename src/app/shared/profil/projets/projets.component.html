@@ -1,0 +1,43 @@
+<!-- Titre de la section -->
+<h5 class="mt-5 mb-3 fst-italic ms-4">Mes projets {{typeProjet}}</h5>
+
+  <!-- Lorsqu'il y a au moins un article -->
+<div class="container" *ngIf="listProjet.length > 0">
+    <div class="box rounded mx-1 mb-3 shadow-lg p-3 mb-5" *ngFor="let item of listProjet">
+
+      <!-- si le statut du projet correspond au type de projet selectionne on affiche le projet -->
+      <div > <!--*ngIf="item.statut===typeProjet"-->
+        <!-- categorie = ecole ou categorie = personnel -->
+        <h6 class="ms-3 mt-3 mb-1">Projet {{item.type}}</h6>
+        <hr class="m-0 mx-3">
+        <div class="mt-3">
+          <div class="ms-3 mb-1">
+            Theme:<span class="fw-light ms-3 mb-1">{{item.theme}}</span>
+          </div>
+        </div>
+        <div class="mt-3">
+          <div class="ms-3 mb-1">
+            Description:<span class="fw-light ms-3 mb-1">{{item.description}}</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+<!-- Lorsqu'il n'y a pas d'article -->
+<div class="container" *ngIf="listProjet.length <= 0">
+  <div class="box rounded mb-3 shadow-lg p-3 mb-5">
+    <h6 class="ms-3 mt-3 mb-1">Aucun projet {{typeProjet}} actuellement</h6>
+    <hr class="mt-0 mb-5 mx-3">
+  </div>
+</div>
+
+<!-- Bouton d'ajout  -->
+<button type="button" class="fw-bolder text-white floating-button fs-1 fw-bolder px-3 py-0 justify-content-center rounded-circle border border-none mt-3">
+  +
+</button>
+
+<hr class="mt-3">
+
+

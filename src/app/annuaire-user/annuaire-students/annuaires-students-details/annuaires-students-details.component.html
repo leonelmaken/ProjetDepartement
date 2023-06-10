@@ -1,0 +1,75 @@
+<section style="background-color: #eee;">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <!-- <img src=" {{ (currentUserData)?.profilepictUrl }}" alt="avatar" class="rounded-circle img-fluid" style="width: 150px;"> -->
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar" [title]="currentUserData?.roles" class="rounded-circle img-fluid" style="width: 150px;">
+            <h5 class="my-3">{{ currentUserData?.nom }}</h5>
+            <p class="text-muted mb-1">{{ (currentUserData)?.matricule }}</p>
+            <p class="text-muted mb-2">{{ (currentUserData)?.niveau }}</p>
+            <div class="d-flex justify-content-center mb-1">
+              <!--
+                  <button type="button" class="btn btn-primary">Edit</button>
+                  <button type="button" class="btn btn-outline-primary ms-1">Offres</button>
+              -->
+              <a [routerLink]="['/annuaireStu']"><button type="button" class="btn btn-primary">Back</button></a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Full Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ currentUserData?.nom }} {{ currentUserData?.prenom }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Email</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ (currentUserData)?.mail }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Phone</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ (currentUserData)?.numTel }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Role</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ currentUserData?.roles }}</p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Competences</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0">{{ currentUserData?.competence }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

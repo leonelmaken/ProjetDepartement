@@ -1,0 +1,60 @@
+
+<section class="h-100 gradient-form" style="background-color: #f5f5f5;">
+  <div class="container-md h-40">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+        <div class="card rounded-5 text-black my-3">
+          <div class="card-body p-md-5 mx-md-4">
+            <!--Insertion du titre du formulaire-->
+            <div class="text-center mb-5">
+              <h2 class="pb-1">Nouveau projet</h2>
+            </div>
+
+            <!--Formulaire-->
+            <form [formGroup]="form" (ngSubmit)="submit()">
+              <div class="form-outline mb-4 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="theme du projet" formControlName="theme"/>
+              </div>
+
+              <div class="d-flex justify-content-start mb-4 small">
+                <label class="form-label small" for="form2Example11">Etat du projet</label>
+                <div class="form-outline ms-3">
+                  <select class="select" formControlName="statut">
+                    <option value="inProgress">En cours</option>
+                    <option value="ended">Termine</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="d-flex justify-content-start mb-4 small">
+                <label class="form-label small" for="form2Example11">Est-ce un projet personnel?</label>
+                <div class="form-outline ms-3">
+                  <select class="select" formControlName="projetPersonnel">
+                    <option value="oui">oui</option>
+                    <option value="non">non</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-outline mb-5 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="superviseur du projet" formControlName="encadreur"/>
+              </div>
+
+              <!-- Boutons Creer et annuler -->
+              <div class="modal-footer mb-3">
+                <button [disabled]="form.invalid" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none me-4 fs-5" type="submit" data-dismiss="modal">Creer</button>
+                <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none me-4 fs-5">Annuler</button>
+              </div>
+
+            </form>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+

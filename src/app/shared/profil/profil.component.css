@@ -1,0 +1,118 @@
+/* Couleur de la seconde navbar */
+.barreSecondaire{
+  background:  #b4d6fd;
+}
+div.fixed-top{
+  background:#b4d6fd;
+}
+
+
+/* couleur du lien de suppression de compte */
+#delete:hover{
+  color: #441db1;
+}
+
+/* Mise en forme du menu de la seconde navbar */
+.menu{
+  list-style-type: none;
+  display: flex;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* Mise en forme de chaque element du menu */
+#menu-item{
+  margin: 0 40px 0 10px;
+  padding-bottom: 10px;
+  margin-bottom: 7px;
+}
+
+/* Couleur de la bordure inferieure et du texte lors du survole d'un element du men */
+#menu-item:hover{
+  border-bottom: 5px solid  #441db1;
+  color: #441db1;
+}
+
+.menuActif {
+  border-bottom: 5px solid  #441db1;
+  color: #441db1;
+}
+
+/* On enleve le style liste au sous menu */
+.sub-menu{
+  list-style-type: none;
+  display: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+/* On enleve le style de lien aux elements du sous menu et ont leur met une couleur blanche */
+.sub-item{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* On fait ressortir les sous menus et on met la couleur sur les elements du menu lorsqu'on les survole */
+li:hover .sub-menu{
+  display: block;
+}
+
+/* On met une couleur aux elements des sous menus lorsqu'on les survole */
+.sub-item:hover {
+  color: #441db1;
+}
+
+/* On met le profil en colonne et on le rend flexible */
+.profil{
+  display: flex;
+  flex-direction: column;
+  background-color: #deecfc;
+
+}
+
+/* On met de l'espace entre le bouton de modification et le trait au dessus lien pour supprimer son compte */
+.logout-btn{
+  margin-bottom: 300px;
+}
+
+/* On dimensionne la photo de profil */
+.image{
+  width: 200px;
+  height: 180px;
+  border-radius: 20px;
+  margin: 30px 10px 0 0px;
+}
+
+
+
+/* ################# PARTIE RESPONSIVE ################# */
+
+
+/* Apparition de la scrollbar horizontale dans la seconde navbar pour les ecrans de telephone et les tablettes */
+@media(max-width:800px){
+  #sous-nav{
+    overflow-x: auto;
+  }
+}
+/* On centre le sous menu de navigation */
+@media (min-width:500px) and (max-width:1250px){
+  .menu{
+    justify-content: center;
+  }
+}
+/* Responsive sur la taille de l'image, l'alignement de l'image et des infos, et le bouton de modification */
+@media (max-width:1250px){
+  .image{
+    width: 150px;
+    height: 130px;
+    margin-left: 20px;
+  }
+  .profil{
+    flex-direction: row;
+  }
+  .logout-btn{
+    margin-bottom: 30px;
+  }
+}
+
+

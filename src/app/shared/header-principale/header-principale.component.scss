@@ -1,0 +1,82 @@
+
+/* On stylise le header */
+header{
+  height: 100vh;
+  background-image: url('/assets/img/Sans titre.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+/* Responsive du header */
+@media (max-width: 600px){
+  header{
+    height: 400px;
+  }
+}
+
+/*On donne une hauteur au corps de notre page */
+.content{
+  height: 2000px;
+}
+
+/* On definit la transition qui se fera pour le changement de couleur de la navbar */
+.navbar{
+  transition: background-color 0s ease-in-out;
+}
+
+/* On definit la couleur que prendra la navbar lorsqu'elle sera fixe */
+nav.fixed-top{
+  background:  #c890fc;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #2493ee, #3936d8, #2540df, #441db1);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #2493ee, #3936d8, #2540df, #441db1);
+}
+
+#navL{
+  margin-right: 20px;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 50px;
+  padding: 0 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#navL:hover{
+  background-color: white;
+  color: #441db1;
+}
+
+/* On enleve le style liste au sous menu */
+.sub-menu{
+  list-style-type: none;
+  display: none;
+  padding-left: 0;
+  text-align: center;
+}
+
+/* On enleve le style de lien aux elements du sous menu et ont leur met une couleur blanche */
+.sub-item{
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* On fait ressortir les sous menus et on met la couleur sur les elements du menu lorsqu'on les survole */
+li:hover .sub-menu{
+  display: block;
+}
+
+
+/* On met une couleur aux elements des sous menus lorsqu'on les survole */
+.sub-menu li:hover {
+  background-color: #ffffff;
+}
+.sub-menu:hover .sub-item{
+  color: #0d0d0e;
+}
+
+

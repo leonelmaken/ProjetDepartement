@@ -1,0 +1,37 @@
+<!-- Titre de la section -->
+<h5 class="mt-5 mb-3 fst-italic ms-4">Mes articles</h5>
+
+  <!-- Lorsqu'il y a au moins un article -->
+<div class="container" *ngIf="listArticle.length > 0">
+    <div class="box rounded mx-1 mb-3 shadow-lg p-3 mb-5" *ngFor="let item of listArticle">
+      <h6 class="ms-3 mt-3 mb-1">{{item.theme}}</h6>
+      <hr class="m-0 mx-3">
+
+      <!-- On verifie si le nom de l'auteur est different de celui de l'utilisateur connecte afin de l'afficher -->
+      <div class="mt-2">
+        <div class="ms-3 mb-1" *ngIf="item.nameAuteur!= user.nom">
+          Auteur:<span class="fw-light ms-3 mb-1">{{item.nameAuteur}}</span>
+        </div>
+      </div>
+      <div class="mt-2">
+        <div class="ms-3 mb-1">
+          Lien vers l'article:<span class="fw-light ms-3 mb-1">{{item.link}}</span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- Lorsqu'il n'y a pas d'article -->
+<div class="container" *ngIf="listArticle.length <= 0">
+  <div class="box rounded mb-3 shadow-lg p-3 mb-5">
+    <p class="fw-light ms-3">aucun article actuellement</p>
+    </div>
+</div>
+
+<!-- Bouton d'ajout  -->
+<button type="button" class="text-white floating-button fw-bolder fs-1 fw-bolder px-3 py-0 justify-content-center rounded-circle mt-3">
+  +
+</button>
+
+
+<hr class="mt-3">

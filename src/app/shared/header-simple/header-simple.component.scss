@@ -1,0 +1,29 @@
+
+/* On definit la couleur de la navbar */
+nav{
+  background:  #c890fc;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #2493ee, #3936d8, #2540df, #441db1);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #2493ee, #3936d8, #2540df, #441db1);
+}
+
+#navL{
+  margin-right: 20px;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 50px;
+  padding: 0 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+#navL:hover{
+  background-color: white;
+  color: #441db1;
+  cursor: pointer;
+}
+

@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+  <h2 *ngIf="companies && companies.length > 0 ">{{title}}</h2>
+<br>
+<div class="my-2">
+  <div class="row">
+     <div class="col-md-5 form-group d-flex ">
+       <span class="search" >rechercher</span>
+        <input type="text" class="form-control" [ngModel]="companyresearch" (ngModelChange)="companyresearch = $event">
+     </div>
+  </div>
+</div>
+<br>
+<div  *ngFor=" let company of recherchercompany ">
+
+  <div class="card mb-4" id="elements" style="max-width: 100%;">
+    <div class="row g-0 md-4">
+      <div class="col-md-4 order-last" id="profilpic">
+        <img [src]=" company.photo "  [title]=" company.roles + ' '  + company.location" class="img-fluid rounded-start" [alt]=" company.location ">
+      </div>
+      <div class="col-md-7 order-last ">
+        <div class="card-body ">
+          <h3 class="card-title">{{company.nom}}</h3>
+          <h5 class="card-title">{{company.roles}} {{ company.location }} </h5>
+          <h6 class="card-title">{{company.numTel}}</h6>
+        </div>
+        <div class=" modif ">
+          <p class="card-text d-flex "><small class="text-body-secondary ">Dernieres modifications il y'a 3 mins <button class="btn btn-primary " [routerLink]="['/annuaireCom',company.idUser]">regarder</button></small></p>
+
+        </div>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>
+  </div>
+

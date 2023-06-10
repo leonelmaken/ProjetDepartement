@@ -1,0 +1,51 @@
+<h5 class="mt-5 mb-3 fst-italic ms-4">Personal information</h5>
+<div class="container">
+  <!-- Box pour les competence -->
+  <div class="box rounded shadow-lg p-3 mb-5" *ngIf="(donneesUtilisateur.roles) != 'Entreprise'">
+    <h6 class="ms-3 mt-3 mb-1">Skill(s)</h6>
+    <hr class="m-0 mx-3">
+    <div class="mt-3" *ngIf="(donneesUtilisateur.competence) != null">
+    <p class="fw-light ms-3 mb-1">{{donneesUtilisateur.competence}}</p>
+    </div>
+    <div class="mt-3"*ngIf="(donneesUtilisateur.competence)==0">
+      <p class="fw-light ms-3">Aucune competence inseree actuellement/p>
+    </div>
+  </div>
+  <!-- Box pour les moyens de contacts -->
+  <div class="box rounded ms-1 shadow-lg p-3 mb-5">
+    <h6 class="ms-3 mt-3 mb-1">Contactez-moi</h6>
+    <hr class="m-0 mx-3">
+    <div class="mt-3">
+      <div class="ms-3 mb-1">
+      @Mail:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.mail}}</span>
+      </div>
+    <div class="ms-3 mb-1">
+      Numero de telephone:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.numTel}}</span>
+    </div>
+    </div>
+  </div>
+  <!-- Box pour les informations sensibles -->
+  <div class="box rounded shadow-lg p-3 mb-5">
+    <h6 class="ms-3 mt-3 mb-1">Sensitive information</h6>
+    <hr class="m-0 mx-3">
+    <div class="ms-3 mb-1" *ngIf="(donneesUtilisateur.roles) != 'Entreprise'">
+      Matricule:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.matricule}}</span>
+    </div>
+    <div class="ms-3 mb-1" *ngIf="(donneesUtilisateur.roles) == 'Entreprise'">
+      Numero Contribuable:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.contributeNumber}}</span>
+    </div>
+    <div class="ms-3 mb-1" *ngIf="(donneesUtilisateur.roles) == 'Entreprise'">
+      Localisation:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.location}}</span>
+    </div>
+    <div class="ms-3 mb-1"  *ngIf="(donneesUtilisateur.roles) == 'Etudiant'">
+      Niveau:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.niveau}}</span>
+    </div>
+    <div class="ms-3 mb-1"  *ngIf="(donneesUtilisateur.roles) == 'Enseignant'">
+      Grade:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.grade}}</span>
+    </div>
+    <div class="ms-3 mb-1">
+      Mot de passe:<span class="fw-light ms-3 mb-1">{{donneesUtilisateur.password}}</span>
+    </div>
+  </div>
+</div>
+<hr class="mt-5">

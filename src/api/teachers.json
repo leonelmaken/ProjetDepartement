@@ -1,0 +1,89 @@
+[
+  {
+
+ "id": 1,
+ "competences":"tyukjls info supplementaires",
+ "matricule":"20vjnh",
+ "specialite":"not-define",
+ "password":" ",
+ "firstName": "Manuella",
+ "lastName": "Kengni",
+ "mail": "manuellakeng",
+ "phone": "653036612",
+ "address": "emana",
+ "profilepictUrl":"assets/img/image00002.jpg",
+ "confirmPassword": "",
+ "role":"Enseignant"
+
+
+
+  },
+  {
+   "id": 2,
+   "competences":"ls info supplementaires jnb",
+   "matricule":"2456cgh",
+   "specialite":"not-define",
+   "password": " ",
+   "firstName": "Bruno",
+   "lastName": "bruno_nom",
+   "mail": "brunoNDuwa",
+   "phone": "653036612",
+   "address": "elig",
+   "profilepictUrl":"photo",
+   "confirmPassword": "",
+   "role":" "
+
+
+  },
+  {
+   "id": 3,
+   "specialite":"not-define",
+   "matricule":"26sdfgh",
+   "password":" ",
+   "firstName": "Rachel",
+   "lastName": "Baby",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "address": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires sdfghj",
+   "confirmPassword": "",
+   "role":" "
+
+
+  },
+  {
+   "id": 4,
+   "competences":"ls info supplementaires de ce mr",
+   "matricule":"1356dfg",
+   "specialite":"not-define",
+   "password":" ",
+   "firstName": "Maken",
+   "lastName": "lionel",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "address": "emana",
+   "profilepictUrl":"photo",
+   "confirmPassword": "",
+   "role":" "
+
+
+
+  },
+  {
+   "id": 5,
+   "matricule":" ",
+   "password":" ",
+   "specialite":"not-define",
+   "firstName": "Broly",
+   "lastName": "Divane",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "address": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires",
+   "confirmPassword": "",
+   "role":" "
+
+  }
+ ]

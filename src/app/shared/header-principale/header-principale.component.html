@@ -1,0 +1,91 @@
+
+
+<header class="container-fluid">
+  <!-- Barre de navigation-->
+  <nav class="navbar navbar-expand-lg" [ngClass]="{'fixed-top': isFixed}">
+    <div class="container-fluid">
+
+      <!-- Insertion du logo de l'universite et du nom du departement -->
+      <div class="d-flex text-center row ms-2 w-25 h-25 mt-2">
+        <img src="/assets/img/Sans titre.jpeg"
+          style="width: 90px;" class="col-lg-2" alt="logo">
+        <p class="h6 col-lg-2 fst-italic mb-2 fw-bolder text-white">Departement informatique</p>
+      </div>
+
+      <!-- Creation du bouton toggle qui permettra de reduire le menu -->
+      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Elements du menu -->
+      <div class="collapse navbar-collapse align-content-center" id="navbarNav">
+        <ul class="navbar-nav justify-content-space-bet">
+          <li class="nav-item">
+            <a class="nav-link" id="navL" aria-current="page"  (click)="refresh()"(click)="afficherMenu('accueil')"  [class.menuActif]="isActive('accueil')">Accueil</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" id="navL" (click)="refresh()" [class.menuActif]="isActive('annuaires')">Annuaires</a>
+            <ul class="sub-menu">
+              <hr class="mb-2 mx-3">
+              <li class="mb-2">
+                <a class="sub-item" (click)="refresh()" (click)="afficherMenu('annuaires')" >Enseignant</a>
+              </li>
+              <li class="mb-2">
+                <a class="sub-item" (click)="refresh()" (click)="afficherMenu('annuaires')" >Entreprise</a>
+              </li>
+              <li>
+                <a class="sub-item"  (click)="refresh()" (click)="afficherMenu('annuaires')" >Etudiant</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link dropdown-toggle" id="navL" (click)="refresh()" [class.menuActif]="isActive('offres')">Offres</a>
+            <ul class="sub-menu">
+              <hr class="mb-2 mx-3">
+              <li class="mb-2">
+                <a class="sub-item" (click)="afficherMenu('offres')" (click)="refresh()" >Emploi</a>
+              </li>
+              <li class="mb-2">
+                <a class="sub-item" (click)="afficherMenu('offres')" (click)="refresh()" >Stage</a>
+              </li>
+              <li>
+                <a class="sub-item" (click)="afficherMenu('offres')" (click)="refresh()" >parrainage</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="navL" (click)="afficherMenu('actualites')" (click)="refresh()" [class.menuActif]="isActive('actualites')">Actualites</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link" id="navL" (click)="afficherMenu('a-propos')" (click)="refresh()" [class.menuActif]="isActive('a-propos')">A propos du departement</a>
+          </li>
+        </ul>
+      </div>
+
+        <div *ngIf="isConnected" [routerLink]="['/profil']" (click)="refresh()" class="button btn mt-1 ml-2">
+            Mon profil
+        </div>
+
+        <div *ngIf="!isConnected" [routerLink]="['/connexion']" (click)="refresh()" class="button btn mt-1 ml-2">
+            Se connecter
+        </div>
+
+        <div *ngIf="!isConnected" [routerLink]="['/inscription']" (click)="refresh()" class="button btn mt-1 ml-2">
+            S'enregistrer
+        </div>
+
+
+
+
+
+    </div>
+  </nav>
+</header>
+
+<!-- Contenu de la page -->
+<div class="content">
+
+</div>
+
+
+

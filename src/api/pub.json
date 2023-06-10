@@ -1,0 +1,51 @@
+[
+    {
+        "idPub": 1,
+        "title": "Coupe du departement",
+        "description": "La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT La coupe est arrivee a la finale qui opposera les etudiant d'info L3 a ceux d'ICT   1",
+        "image": "assets/img/image00001.jpg",
+        "type": "ACTU"
+    },
+    {
+        "idPub": 2,
+        "title": "Titlte 2",
+        "description": "Description 2",
+        "image": "assets/img/image00002.jpg",
+        "type": "EVENT"
+    },
+    {
+        "idPub": 3,
+        "title": "Titlte 3",
+        "description": "Description 3",
+        "image": "assets/img/image00003.jpg",
+        "type": "PUB"
+    },
+    {
+        "idPub": 4,
+        "title": "Titlte 4",
+        "description": "Description 4",
+        "image": "assets/img/image00004.jpg",
+        "type": "ACTU"
+    },
+    {
+        "idPub": 5,
+        "title": "Titlte 5",
+        "description": "Description 5",
+        "image": "assets/img/image00005.jpg",
+        "type": "EVENT"
+    },
+    {
+        "idPub": 6,
+        "title": "Titlte 6",
+        "description": "Description 6",
+        "image": "assets/img/image00006.jpg",
+        "type": "PUB"
+    },
+    {
+        "idPub": 7,
+        "title": "Titlte 7",
+        "description": "Description 7",
+        "image": "assets/img/image00007.jpg",
+        "type": "ACTU"
+    }
+]

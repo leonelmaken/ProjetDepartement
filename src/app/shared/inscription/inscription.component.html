@@ -1,0 +1,94 @@
+
+<section class="h-100 gradient-form" style="background-color: #f5f5f525;">
+  <div class="container h-40">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-10">
+        <div class="card rounded-5 my-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-6 d-flex align-items-top gradient-custom-2 rounded-5">
+              <div class="text-white px-3 py-4 p-md-5 mx-md-4 ">
+                <!--Insertion du logo et du nom du departement-->
+                <div class="text-center ">
+                  <img src="/assets/images/logoDept.png"
+                    style="width: 185px;" alt="logo">
+                  <h4 class="mb-5 fst-italic">Departement informatique</h4>
+                </div>
+                <!--Carousel pour le defilement du texte-->
+                <div id="carouselExampleSlidesOnly" class="carousel slide mt-5" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <h5 class="mt-4">Venez a la rencontre de nouvelles opportunites.</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">Etudiants, enseignants et entreprises</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">La plateforme du departement informatique de l'Universite de Yaounde I vous aide a vous promouvoir</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">Entrez en contact avec le profil qui vous interesse, cela juste en un clic</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">Trouver des stages, des emplois ou des parrainages facilement</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">Obtenez les services d'Etudiants ou d'enseignants en informatique pour vos besoins</h5>
+                    </div>
+                    <div class="carousel-item">
+                      <h5 class="mt-4">Demandez un encadrement a l'enseignant de votre choix</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card-body p-md-5 mx-md-4">
+
+                <!--Titre du formulaire-->
+                <div class="text-center">
+                  <h4 class="mt-0 mb-1 pb-1 fs-1">Sign up</h4>
+                </div>
+                <!--Choix du type d'utilisateur-->
+                <div class="d-md-flex justify-content-start align-items-center mb-2 py-2">
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="afficherChamp('etudiant')" checked/>
+                    <label class="form-check-label" for="etudiantUser">Etudiant</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0 me-4">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="afficherChamp('enseignant')" />
+                    <label class="form-check-label" for="enseignantUser">Enseignant</label>
+                  </div>
+
+                  <div class="form-check form-check-inline mb-0">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" (click)="afficherChamp('entreprise')"/>
+                    <label class="form-check-label" for="entrepriseUser">Entreprise</label>
+                  </div>
+                </div>
+
+                <div *ngIf="champSelectionne =='etudiant'">
+                  <app-inscription-etudiant></app-inscription-etudiant>
+                </div>
+
+                <div *ngIf="champSelectionne =='enseignant'">
+                  <app-inscription-enseignant></app-inscription-enseignant>
+                </div>
+
+                <div *ngIf="champSelectionne =='entreprise'">
+                  <app-inscription-entreprise></app-inscription-entreprise>
+                </div>
+
+              </div>
+              <!--Renvoi vers le formulaires d'inscription-->
+              <div class="d-flex align-items-center justify-content-center pb-4">
+              <p class="mb-0 me-2">Vous avez déjà un compte?</p>
+              <button [routerLink]="['/connexion']" type="submit" class="btn btn-outline-danger">Se connecter</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

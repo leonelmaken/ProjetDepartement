@@ -1,0 +1,50 @@
+
+<section class="h-100 gradient-form" style="background-color: #f5f5f5;">
+  <div class="container-md h-40">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+        <div class="card rounded-5 text-black my-3">
+          <div class="card-body p-md-5 mx-md-4">
+            <!--Insertion du titre du formulaire-->
+            <div class="text-center mb-5">
+              <h2 class="pb-1">Ajout d'un article</h2>
+            </div>
+
+            <!--Formulaire-->
+            <form [formGroup]="form" (ngSubmit)="submit()">
+
+              <div class="form-outline mb-4 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="Theme de l'article" formControlName="theme"/>
+              </div>
+
+              <div class="form-outline mb-4 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="Lien vers l'article" formControlName="link"/>
+              </div>
+
+              <div class="form-outline mb-4 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="Nom de l'auteur" formControlName="nameAuteur"/>
+              </div>
+
+              <div class="form-outline mb-5 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="Description" formControlName="description"/>
+              </div>
+
+              <!-- Boutons Creer et annuler -->
+              <div class="modal-footer mb-2">
+                <button [disabled]="form.invalid" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none me-4 fs-5" type="submit" data-dismiss="modal">Creer</button>
+                <button type="submit" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none me-4 fs-5">Annuler</button>
+              </div>
+
+            </form>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+

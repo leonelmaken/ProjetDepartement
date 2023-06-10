@@ -1,0 +1,23 @@
+<div class="container">
+  <button class="btn btn-outline-info d-flex" (click)="backToList()"><span class="material-icons">keyboard_arrow_left</span> retour aux evenements</button>
+
+    <h1 class="card-title mb-4 mt-4" style="font-weight: bolder;"> {{ currentActus?.title }} </h1>
+    <div class="row">
+        <div class="col-md-12">
+            <hr>
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <img src="" alt="{{ currentActus?.image }}" srcset="{{currentActus?.image}}" width="550px">
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card-body">
+                            <p class="card-text">{{ currentActus?.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

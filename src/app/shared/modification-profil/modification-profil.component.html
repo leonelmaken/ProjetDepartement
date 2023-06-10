@@ -1,0 +1,125 @@
+
+
+<div class="h-100 gradient-form" style="background-color: #f5f5f5;">
+  <div class="container-md h-40">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-xl-8">
+
+        <div class="card rounded-5 text-black my-5">
+          <div class="card-body p-md-5 mx-md-4">
+
+            <!--Titre du formulaire-->
+            <div class="text-center">
+              <h4 class="mt-0 mb-5 pb-1 fs-1">Modification des informations</h4>
+            </div>
+
+            <form (ngSubmit)="submit()">
+
+              <!-- Champs de tous les formulaire -->
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="prenom(s)"/>
+                <label class="form-label small" for="form2Example11">First name</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="nom(s)"/>
+                <label class="form-label small" for="form2Example11">Last name</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="nom de l'entreprise"/>
+                <label class="form-label small" for="form2Example11">Company name</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="quartier de residence"/>
+                <label class="form-label small" for="form2Example11">Localisation</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="date de creation"/>
+                <label class="form-label small" for="form2Example11">Creation date</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="matricule"/>
+                <label class="form-label small" for="form2Example11">Personal number</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="email" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="adresse mail"/>
+                <label class="form-label small" for="form2Example11">Mail</label>
+              </div>
+
+              <div class="d-flex justify-content-start mb-3 small">
+                <label class="form-label small" for="form2Example11">Level</label>
+                <div class="form-outline ms-3">
+                  <select class="select" formControlName="level">
+                    <option value="1">Licence 1</option>
+                    <option value="2">Licence 2</option>
+                    <option value="3">Licence 3</option>
+                    <option value="4">Master 1</option>
+                    <option value="5">Master 2</option>
+                    <option value="6">Doctorat</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="domaine de specialisation"/>
+                <label class="form-label small" for="form2Example11">Speciality</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="grade universitaire"/>
+                <label class="form-label small" for="form2Example11">Grade</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="telephone"/>
+                <label class="form-label small" for="form2Example11">Phone</label>
+              </div>
+
+              <div class="form-outline mb-1 small">
+                <input type="text" id="form2Example11" class="form-control form-control-sm"
+                  placeholder="JAVA,PHP..."/>
+                <label class="form-label small" for="form2Example11">Skill(s)</label>
+              </div>
+
+              <!--Zone de saisie du mot de passe avec affichage et masquage-->
+              <div class="form-outline mb-1 small">
+                <div class="input-group">
+                  <input [type]="isPasswordVisible ? 'texte' : 'password'" id="form2Example22" class="form-control form-control-sm" placeholder="*************">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-secondary btn-sm" type="button" (click)="togglePasswordVisibility()">
+                      <i [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" class="fa"></i>
+                    </button>
+                  </div>
+                </div>
+                <label class="form-label small" for="form2Example22">Password</label>
+              </div>
+
+              <!-- bouton pour valider et annuler -->
+              <div class="d-flex justify-content-center mx-3 mb-2 mb-lg-3">
+                <button (click)="retourProfil()" class="me-5 btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none" type="submit">Valider</button>
+                <button (click)="retourProfil()" class="ms-5 btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none" type="submit">Annuler</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

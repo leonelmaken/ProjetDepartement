@@ -1,0 +1,79 @@
+.card-text {
+  margin-left: -70px;
+}
+#back:hover{
+background-color: rgb(38, 147, 230);
+}
+
+.modif{
+  margin-left: 40%;
+  margin-bottom: 40%;
+}
+
+#back1, #back{
+  background-color:rgb(156, 22, 185);
+}
+
+.postuler{
+  margin-left: 900px;
+ margin-top: -40px;
+}
+
+.recommander{
+    margin-left: 1000px;
+    margin-top: -40px;
+  }
+
+  li {
+    list-style:none !important; /*On enlève les puces de la liste */
+    color:#FFF;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+
+    nav ul {
+    background-color:#64abfb;
+    padding:0;
+    margin:0;
+    }
+
+
+    nav ul li {
+    list-style: none;
+    line-height:44px;
+    float:left;
+    margin-top: -10px;
+    }
+
+    nav ul li a {
+    color:#FFF;
+    padding:10px;
+    font-size:20px;
+    text-decoration:none;
+    }
+
+    li a:hover {
+    border-bottom:3px #FFF solid;
+    }
+
+    nav ul li ul {
+    display:none; /* Rend le menu déroulant caché par défaut */
+    }
+
+    nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+    z-index:99999;
+    display:list-item !important;
+    position:absolute;
+    margin-top:5px;
+    margin-left:-10px;
+    }
+
+    nav ul li:hover ul li {
+    float:none;
+    }
+
+
+#back1:hover{
+  background-color: rgb(38, 147, 230);
+}

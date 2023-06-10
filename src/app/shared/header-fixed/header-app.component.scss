@@ -1,0 +1,144 @@
+
+/* On definit la couleur de la navbar */
+nav.fixed-top{
+  background:  #c890fc;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, #654ac0, #372bc2, #1d2fb8, #441db1);
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, #371aa0, #5350d9, #2540df, #441db1);
+}
+
+#navL{
+  margin-right: 20px;
+  color: white;
+  font-weight: bolder;
+  font-size: large;
+  border-radius: 50px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+#navL:hover{
+  background-color: white;
+  color: #441db1;
+}
+
+*::after
+{
+  box-sizing: border-box;
+  font-family: 'system-ui',sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+
+nav
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex: 1;
+  padding-right: 40px;
+  text-align: right;
+  list-style-type: none;
+}
+
+nav ul li{
+  margin-right: 10px;
+}
+
+nav ul li a{
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #1a17d7b9;
+  font-size: 18px;
+
+}
+
+button.btn
+{
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 0;
+  background-color: transparent;
+  color: #e65045;
+  border: 1px solid transparent;
+  transition: border-color .3s;
+}
+
+.dropdown-menu{
+ background:#cbccd6 ;
+
+}
+.navbar{
+  height: 180px;
+}
+
+
+
+
+
+
+li {
+  list-style:none !important; /*On enlève les puces de la liste */
+  color:#FFF;
+  padding:10px;
+  font-size:20px;
+  text-decoration:none;
+}
+// nav ul {
+// background-color:#64abfb;
+// padding:0;
+// margin:0;
+// }
+// nav ul li a {
+// color:#FFF;
+// padding:10px;
+// font-size:20px;
+// text-decoration:none;
+// }
+li a:hover {
+  border-bottom:3px #FFF solid;
+}
+nav ul li ul {
+  display:none; /* Rend le menu déroulant caché par défaut */
+}
+nav ul li:hover ul { /* Affiche la dropNav au survol de la souris avec la class .drop */
+  z-index:99999;
+  display:list-item !important;
+  position:absolute;
+  margin-top:5px;
+  margin-left:-10px;
+}
+
+nav ul li:hover ul li {
+  float:none;
+}
+
+.button{
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50px;
+    color: #FFF;
+    font-weight: bolder;
+}
+
+.button:hover{
+    background-color: white;
+    color: blueviolet;
+}

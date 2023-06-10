@@ -1,0 +1,94 @@
+ [
+  {
+
+ "id": 1,
+ "competences":"tyukjls info supplementaires",
+ "matricule":"20vjnh",
+ "specialite":"not-define",
+ "password":" ",
+ "firstName": "Manuella",
+ "lastName": "Kengni",
+ "mail": "manuellakeng",
+ "phone": "653036612",
+ "address": "emana",
+ "niveau": "L2",
+ "profilepictUrl":"assets/img/image00003.jpg",
+ "confirmPassword": "",
+ "role":"Etudiant"
+
+
+
+  },
+  {
+   "id": 2,
+   "competences":"ls info supplementaires jnb",
+ "niveau": "L2",
+ "matricule":"2456cgh",
+   "specialite":"not-define",
+   "password": " ",
+   "firstName": "Bruno",
+   "lastName": "bruno_nom",
+   "mail": "brunoNDuwa",
+   "phone": "653036612",
+   "address": "elig",
+   "profilepictUrl": "assets/img/image00001.jpg",
+   "confirmPassword": "",
+   "role":" "
+
+
+  },
+  {
+   "id": 3,
+   "specialite":"not-define",
+   "matricule":"26sdfgh",
+   "password":" ",
+   "firstName": "Rachel",
+ "niveau": "L2",
+ "lastName": "Baby",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "address": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires sdfghj",
+   "confirmPassword": "",
+   "role":" "
+
+
+  },
+  {
+   "id": 4,
+   "competences":"ls info supplementaires de ce mr",
+   "matricule":"1356dfg",
+   "specialite":"not-define",
+   "password":" ",
+   "firstName": "Maken",
+ "niveau": "L2",
+ "lastName": "lionel",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "address": "emana",
+   "profilepictUrl":"photo",
+   "confirmPassword": "",
+   "role":" "
+
+
+
+  },
+  {
+   "id": 5,
+   "matricule":" ",
+   "password":" ",
+   "specialite":"not-define",
+   "firstName": "Broly",
+   "lastName": "Divane",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+ "niveau": "L3",
+ "address": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires",
+   "confirmPassword": "",
+   "role":" "
+
+  }
+ ]

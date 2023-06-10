@@ -1,0 +1,33 @@
+.form-control{
+  margin-left: 30px;
+}
+
+.modif{
+  margin-left: 45%;
+  margin-bottom: 0%;
+}
+.search{
+font-size: 22px;
+}
+#profilpic{
+  // margin-top: 2%;
+ background-color: #e65045;
+ margin-bottom: -25px;
+ margin-top: -19px;
+ border-top-left-radius: 5px;
+ border-bottom-left-radius: 5px;
+}
+.card-body{
+margin-left: 95px;
+}
+
+#elements:hover{
+  transform: scale(1.03);
+}
+#elements {
+  background-color: #75c6eb59;
+  transition: all 0.5s ease;
+  box-shadow: 4px 5px 15px black ;
+}
+
+

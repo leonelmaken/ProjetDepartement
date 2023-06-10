@@ -1,0 +1,177 @@
+<main>
+  <!-- navbar principale de la page profil.  -->
+  <div class="barreSecondaire row justify-content-center border-bottom border-black" id="sous-nav" [ngClass]="{'fixed-top': isFixed}">
+
+    <div class="col-xl-10">
+      <div class="row m-0 p-0">
+        <!-- Espacement du menu avec le cote gauche -->
+        <div class="col-xl-3 mt-1 mx-2"></div>
+        <!-- Elements du menu -->
+        <div class="col-xl-7 m-1 pt-3">
+          <ul class="menu text-black fw-semibold">
+            <li>
+              <a (click)="afficherMenu('overview')" [class.menuActif]="isActive('overview')" class="nav-link ms-4" id="menu-item">Mon profil</a>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est un Enseignant ou un Etudiant afin d'afficher le menu article -->
+            <li *ngIf="donneesUtilisateur.roles === 'Enseignant' || donneesUtilisateur.roles === 'Etudiant'">
+              <a (click)="afficherMenu('articles')" [class.menuActif]="isActive('articles')" class="nav-link ms-4" id="menu-item">Articles</a>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est un Enseignant ou un Etudiant afin d'afficher le menu projet -->
+            <li *ngIf="donneesUtilisateur.roles === 'Enseignant' || donneesUtilisateur.roles === 'Etudiant'">
+              <a [class.menuActif]="isActive('projets')" class="nav-link dropdown-toggle" id="menu-item">
+                Projets
+              </a>
+              <ul class="sub-menu">
+                <hr class="mb-2 mx-3">
+                <li>
+                  <a class="mb-2" (click)="recupererSousMenu('acheve'); afficherMenu('projets')" class="sub-item">Acheve</a>
+                </li>
+                <li>
+                  <a (click)="recupererSousMenu('enCours'); afficherMenu('projet')" class="sub-item">En cours</a>
+                </li>
+              </ul>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est un Enseignant afin d'afficher le menu demandes -->
+            <li *ngIf="donneesUtilisateur.roles === 'Enseignant'">
+              <a (click)="afficherMenu('demandesEncadrement')" [class.menuActif]="isActive('demandesEncadrement')" class="nav-link" id="menu-item">
+                Demandes d'encadrement
+              </a>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est une Entreperise afin d'afficher le menu demandes -->
+            <li *ngIf="donneesUtilisateur.roles === 'Entreperise'">
+              <a [class.menuActif]="isActive('demandes')" class="nav-link dropdown-toggle" id="menu-item">
+                Demandes recues
+              </a>
+              <ul class="sub-menu">
+                <hr class="mb-2 mx-3">
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('emploi'); afficherMenu('demandes')" class="sub-item">Emploi</a>
+                </li>
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('parrainage'); afficherMenu('demandes')" class="sub-item">Parrainage</a>
+                </li>
+                <li>
+                  <a (click)="recupererSousMenu('stage'); afficherMenu('demandes')" class="sub-item">Stage</a>
+                </li>
+              </ul>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est un Enseignant afin d'afficher le menu offres -->
+            <li *ngIf="donneesUtilisateur.roles === 'Entreperise'">
+              <a [class.menuActif]="isActive('offres')" class="nav-link dropdown-toggle" id="menu-item">
+                Offres crees
+              </a>
+              <ul class="sub-menu">
+                <hr class="mb-2 mx-3">
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('emploi'); afficherMenu('offres')" class="sub-item">Emploi</a>
+                </li>
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('parrainage'); afficherMenu('offres')" class="sub-item">Parrainage</a>
+                </li>
+                <li>
+                  <a (click)="recupererSousMenu('stage'); afficherMenu('offres')" class="sub-item">Stage</a>
+                </li>
+              </ul>
+            </li>
+            <!-- On verifie si l'utilisateur connectee est un Enseignant ou un Etudiant afin d'afficher le menu proposition -->
+            <li *ngIf="donneesUtilisateur.roles === 'Enseignant' || donneesUtilisateur.roles === 'Etudiant'">
+              <a [class.menuActif]="isActive('propositions')" class="nav-link dropdown-toggle" id="menu-item">
+                Propositions
+              </a>
+              <ul class="sub-menu">
+                <hr class="mb-2 mx-3">
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('emploi'); afficherMenu('propositions')" class="sub-item">Emploi</a>
+                </li>
+                <li class="mb-2">
+                  <a (click)="recupererSousMenu('parrainage'); afficherMenu('propositions')" class="sub-item">Parrainage</a>
+                </li>
+                <li>
+                  <a (click)="recupererSousMenu('stage'); afficherMenu('propositions')" class="sub-item">Stage</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Corps de la page profil -->
+  <div class="row justify-content-center mb-5 border-bottom border-muted">
+
+    <!-- Partie gauche avec la photo de profil et les infos personnelles -->
+    <div class="card col-xl-3 text-center mb-4 border-0 shadow-lg">
+      <div class="profil justify-content-center rounded mt-3">
+        <!-- On affiche la photo de profil de l'utilisateur si elle existe dans la base de donnees -->
+        <div *ngIf="donneesUtilisateur.photo!=null">
+          <img [src]="donneesUtilisateur.photo" alt="photo de profil" class="image">
+        </div>
+         <!-- On affiche une photo de profil par defaut si on n'en trouve pas dans la base de donnees -->
+        <div *ngIf="donneesUtilisateur.photo==null">
+          <img src="/assets/ava3.webp" alt="photo de profil" class="image">
+        </div>
+
+        <!-- On recupere le nom, le prenom et le statut de l'utilisateur connecte -->
+        <div class="mt-5">
+          <h5>{{donneesUtilisateur?.prenom}} {{donneesUtilisateur.nom}}</h5>
+          <p *ngIf="donneesUtilisateur.roles=='Entreprise'">{{donneesUtilisateur.roles}}</p>
+          <p *ngIf="donneesUtilisateur.roles!='Entreprise'">{{donneesUtilisateur.roles}}(e)</p>
+        </div>
+      </div>
+      <div class="edit-btn d-flex justify-content-center pt-5">
+        <button class="btn btn-primary w-75 fa-lg gradient-custom-2 border border-color-none fs-6" type="submit">Edite your profil</button>
+      </div>
+      <div class="logout-btn d-flex justify-content-center pt-5">
+           <button class="btn btn-dark w-75 fa-lg gradient-custom-2 border border-color-none fs-6" (click)="logout()">Logout</button>
+      </div>
+      <hr>
+
+      <!-- Lien pour supprimer son compte -->
+      <p class="text-black">
+        <a href="" class="nav-link fst-italic" id="delete">Delete your account</a>
+      </p>
+    </div>
+
+
+
+
+    <!-- Zone d'affichage des informations principales situee a droite -->
+    <div class="card col-xl-8 mx-2 mb-4 border-0">
+      <!-- Affichage de la section overview -->
+      <div *ngIf="menuSelectionne =='overview'">
+        <app-vue-generale></app-vue-generale>
+      </div>
+
+      <!-- Affichage de la section articles -->
+      <div *ngIf="menuSelectionne =='articles'">
+        <app-articles></app-articles>
+      </div>
+
+
+      <!-- Affichage de la section projets en fonction du type de projet -->
+      <div *ngIf="menuSelectionne==='projets'">
+        <app-projets [typeProjet]="typeSousMenu"></app-projets>
+      </div>
+
+      <!-- Affichage de la section demande en fonction du type de demande-->
+      <div *ngIf="menuSelectionne==='demandes'">
+        <app-demandes [typeDemandes]="typeSousMenu"></app-demandes>
+      </div>
+
+      <!-- Affichage de la section demande d'encadrement -->
+      <div *ngIf="menuSelectionne==='demandesEncadrement'">
+        <app-demandes-encadrement></app-demandes-encadrement>
+      </div>
+
+      <!-- Affichage de la section proposition en fonction du type de proposition -->
+      <div *ngIf="menuSelectionne==='propositions'">
+        <app-propositions [typeProposition]="typeSousMenu"></app-propositions>
+      </div>
+
+    </div>
+
+  </div>
+</main>
+

@@ -1,0 +1,88 @@
+[
+  {
+
+ "id": 1,
+ "competences":"tyukjls info supplementaires",
+ "password":" ",
+ "lastName": "Kengni",
+ "mail": "manuellakeng",
+ "phone": "653036612",
+ "localisation": "emana",
+ "profilepictUrl": "assets/img/image00006.jpg",
+ "dateCreation": "photo",
+ "confirmPassword": "",
+ "role":" ",
+ "numeroContribuable": "string",
+ "webSite": "string"
+
+
+
+  },
+  {
+   "id": 2,
+   "competences":"ls info supplementaires jnb",
+   "password": " ",
+   "lastName": "bruno_nom",
+   "mail": "brunoNDuwa",
+   "phone": "653036612",
+   "localisation": "elig",
+   "profilepictUrl": "assets/img/image00007.jpg",
+   "dateCreation":"photo",
+   "confirmPassword": "",
+   "role":" ",
+   "numeroContribuable": "string",
+   "webSite": "string"
+
+
+  },
+  {
+   "id": 3,
+   "password":" ",
+   "lastName": "Baby",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "localisation": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires sdfghj",
+   "dateCreation":"photo",
+   "confirmPassword": "",
+   "role":" ",
+   "numeroContribuable": "string",
+   "webSite": "string"
+
+
+  },
+  {
+   "id": 4,
+   "competences":"ls info supplementaires de ce mr",
+   "password":" ",
+   "lastName": "lionel",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "localisation": "emana",
+   "profilepictUrl":"photo",
+   "dateCreation":"photo",
+   "confirmPassword": "",
+   "role":"Entreprise",
+   "numeroContribuable": "string",
+   "webSite": "string"
+
+
+  },
+  {
+   "id": 5,
+   "password":" ",
+   "lastName": "Divane",
+   "mail": "manuellakeng",
+   "phone": "653036612",
+   "localisation": "emana",
+   "profilepictUrl":"photo",
+   "competences":"ls info supplementaires",
+   "dateCreation":"photo",
+   "confirmPassword": "",
+   "role":" ",
+   "numeroContribuable": "string",
+   "webSite": "string"
+
+  }
+ ]

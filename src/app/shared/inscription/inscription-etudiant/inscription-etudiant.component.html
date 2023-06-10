@@ -1,0 +1,91 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+  <!-- Champs de tous les formulaire -->
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">First name</label>
+    <input type="text" id="form2Example11" class="form-control form-control-sm"
+      placeholder="Prenom(s)" formControlName="prenom"/>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">Last name</label>
+    <input type="text" id="form2Example11" class="form-control form-control-sm"
+      placeholder="Nom(s)" formControlName="nom"/>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">Personal number</label>
+    <input type="text" id="form2Example11" class="form-control form-control-sm"
+      placeholder="Matricule" formControlName="matricule"/>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">Mail</label>
+    <input type="email" id="form2Example11" class="form-control form-control-sm"
+      placeholder="Adresse mail" formControlName="mail"/>
+  </div>
+
+  <div class="d-flex justify-content-start mb-3 small">
+    <label class="form-label small" for="form2Example11">Level</label>
+    <div class="form-outline ms-3">
+      <select class="select" formControlName="niveau">
+        <option value="L1">Licence 1</option>
+        <option value="L2">Licence 2</option>
+        <option value="L3">Licence 3</option>
+        <option value="M1">Master 1</option>
+        <option value="M2">Master 2</option>
+        <option value="D1">Doctorat</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">Phone</label>
+    <input type="number" id="form2Example11" class="form-control form-control-sm"
+      placeholder="Telephone" formControlName="numTel"/>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example11">Skill(s)</label>
+    <input type="text" id="form2Example11" class="form-control form-control-sm"
+      placeholder="JAVA,PHP..." formControlName="competence"/>
+  </div>
+
+  <!--Zone de saisie du mot de passe avec affichage et masquage-->
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example22">Password</label>
+    <div class="input-group">
+      <input [type]="isPasswordVisible ? 'texte' : 'password'" id="form2Example22" class="form-control form-control-sm" placeholder="*************" formControlName="password">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary btn-sm" type="button" (click)="togglePasswordVisibility()">
+          <i [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" class="fa"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-outline mb-3 small">
+      <label class="form-label small" for="form2Example22">Confirm your password</label>
+    <div class="input-group">
+    <input [type]="isPasswordVisible ? 'texte' : 'password'" id="form2Example22" class="form-control form-control-sm" placeholder="*************" formControlName="confirmPassword">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary btn-sm" type="button" (click)="togglePasswordVisibility()">
+          <i [ngClass]="isPasswordVisible ? 'fa-eye-slash' : 'fa-eye'" class="fa"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!--Acceptation/non de la politique de confidentialite-->
+  <div class="form-check d-flex justify-content-center mb-5">
+    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" formControlName="conditionsInscription"/>
+    <label class="form-check-label" for="form2Example3">
+      I agree all statements in <a href="#!">Terms of service</a>
+    </label>
+  </div>
+
+  <div class="d-flex justify-content-center mx-4 mb-2 mb-lg-3">
+    <button [disabled]="form.invalid" class="btn btn-primary btn-block fa-lg gradient-custom-2 border border-color-none" type="submit">Register</button>
+  </div>
+</form>
+
