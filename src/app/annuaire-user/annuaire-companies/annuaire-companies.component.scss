@@ -20,8 +20,22 @@ font-size: 22px;
 .card-body{
 margin-left: 95px;
 }
-
+#elements:hover{
+  transform: scale(1.03);
+}
 #elements {
   background-color: #75c6eb59;
+  transition: all 0.5s ease;
+  box-shadow: 4px 5px 15px black ;
+}
+#reach{
+    border-radius: 25px;
+    box-shadow: 4px 5px 8px black ;
+     padding: 15px 0 15px 15px;
+}
+#search{
+    margin-left: 20%;
+     display: flex;
+     align-items: center;
 }
 

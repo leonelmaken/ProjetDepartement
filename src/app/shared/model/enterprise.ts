@@ -6,7 +6,7 @@ export interface IEnterprise {
     numTel: Number,
     mail: String,
     password: String,
-    photo: File,
+    photo: any,
     roles: String,
 
     contributeNumber: Number,

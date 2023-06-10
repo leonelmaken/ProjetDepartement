@@ -17,7 +17,7 @@ export class InscriptionEntrepriseComponent {
     this.form= this.fb.group({
       nom:['', Validators.required],
       location:['', Validators.required],
-      photo:['', Validators.required],
+     // photo:['', Validators.required],
       contributeNumber: ['', Validators.required],
       creationDate:['', Validators.required],
       mail:['', Validators.required],
@@ -58,9 +58,9 @@ export class InscriptionEntrepriseComponent {
     return this.form.get('password');
   }
 
-  get photo(){
-    return this.form.get('photo');
-  }
+//   get photo(){
+//     return this.form.get('photo');
+//   }
 
   get confirmPassword(){
     return this.form.get('confirmPassword');

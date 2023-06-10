@@ -1,11 +1,17 @@
 .card {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
-#image:hover{
+img:hover{
   transform: scale(1.08);
   width: 250px;
   filter: brightness(90%) hue-rotate(200deg);
+   transition: all 0.5s ease;
+  drop-shadow :4px 5px 15px black;
 }
+.card{
+    box-shadow: 4px 5px 15px black;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
